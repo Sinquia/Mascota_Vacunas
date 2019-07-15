@@ -26,11 +26,11 @@
                             <p:outputLabel value="Codigo"/>
                             <p:inputText value="#{clienteBean.cliente.idCliente}" required="true"/>
                             <p:outputLabel value="Nombre Cliente"/>
-                            <p:inputText value="#{clienteBean.cliente.nombre}"/>
+                            <p:inputText value="#{clienteBean.cliente.nombres}"/>
                             <p:outputLabel value="Apellido Cliente"/>
-                            <p:inputText value="#{clienteBean.cliente.apellido}"/>
+                            <p:inputText value="#{clienteBean.cliente.apellidos}"/>
                             <p:outputLabel value="Fecha Nac:"/>
-                            <p:calendar value="#{clienteBean.cliente.fechaNac}"/>
+                            <p:calendar value="#{clienteBean.cliente.fechaNaci}"/>
                             <p:outputLabel value="Email"/>
                             <p:inputText value="#{clienteBean.cliente.email}"/>
                             <p:outputLabel value="Direccion"/>
@@ -38,29 +38,30 @@
                             <p:outputLabel value="Telefono"/>
                             <p:inputText value="#{clienteBean.cliente.telefono}"/>
                         </h:panelGrid>
-                        <p:commandButton value="Guardar" action="#{clienteBean.guardarCleinte()}" update=":data:datatable,:from"/>
-                        <p:commandButton value="Actualizar" action="#{clienteBean.actualizarCliente()}" update=":data:datatable,:from"/>
+                        <p:commandButton value="Nuevo" action="#{clienteBean.limpiar()}" update=":data:datatable,:from"/>
+                        <p:commandButton rendered="#{!clienteBean.banderaSelect}" value="Guardar" action="#{clienteBean.guardarCleinte()}" update=":data:datatable,:from"/>
+                        <p:commandButton rendered="#{clienteBean.banderaSelect}" value="Actualizar" action="#{clienteBean.actualizarCliente()}" update=":data:datatable,:from"/>
                     </p:panel>
                 </h:form>
                 <p:panel>
                     <h:form id="data">
                         <p:dataTable rowKey="#{cliente.idCliente}" selection="#{clienteBean.cliente}" selectionMode="single" 
                                      id="datatable" var="cliente" value="#{clienteBean.listarClientes()}">
-                            <p:ajax update=":from" event="rowSelect" />
+                            <p:ajax update=":from" event="rowSelect" listener="#{clienteBean.selectBandera()}"/>
                             <p:column headerText="Codigo">
                                 <h:outputText value="#{cliente.idCliente}"/>
                             </p:column>
                             <p:column headerText="Nombre del Cliente">
-                                <h:outputText value="#{cliente.nombre}"/>
+                                <h:outputText value="#{cliente.nombres}"/>
                             </p:column>
                             <p:column headerText="Apellido del Cliente">
-                                <h:outputText value="#{cliente.apellido}"/>
+                                <h:outputText value="#{cliente.apellidos}"/>
                             </p:column>
                             <p:column headerText="Telefono">
                                 <h:outputText value="#{cliente.telefono}"/>
                             </p:column>
                             <p:column headerText="Fecha Nacimiento">
-                                <h:outputText value="#{cliente.fechaNac}"/>
+                                <h:outputText value="#{cliente.fechaNaci}"/>
                             </p:column>
                             <p:column headerText="Accion">
                                 <p:commandButton value="Eliminar" onclick="PF('dgEliminar').show();">

@@ -8,10 +8,6 @@ package interfaces;
 import entidades.Personal;
 import java.util.ArrayList;
 
-/**
- *
- * @author Computer
- */
 public interface IPersonal {
     
     public abstract boolean guardarPersonal(Personal personal);

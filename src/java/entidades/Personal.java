@@ -1,5 +1,5 @@
 package entidades;
-// Generated 24/06/2019 11:12:26 AM by Hibernate Tools 4.3.1
+// Generated 11/07/2019 10:50:35 AM by Hibernate Tools 4.3.1
 
 
 import java.util.HashSet;
@@ -11,50 +11,59 @@ import java.util.Set;
 public class Personal  implements java.io.Serializable {
 
 
-     private Integer idpersonal;
-     private String nombre;
+     private int idPersonal;
+     private String nombres;
+     private String apellidos;
      private String dni;
      private String telefono;
      private String cargo;
      private String email;
-     private String apellidos;
      private Set atencions = new HashSet(0);
 
     public Personal() {
     }
 
 	
-    public Personal(String nombre, String dni, String telefono, String cargo, String email, String apellidos) {
-        this.nombre = nombre;
+    public Personal(int idPersonal, String nombres, String apellidos, String dni, String telefono, String cargo, String email) {
+        this.idPersonal = idPersonal;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
         this.dni = dni;
         this.telefono = telefono;
         this.cargo = cargo;
         this.email = email;
-        this.apellidos = apellidos;
     }
-    public Personal(String nombre, String dni, String telefono, String cargo, String email, String apellidos, Set atencions) {
-       this.nombre = nombre;
+    public Personal(int idPersonal, String nombres, String apellidos, String dni, String telefono, String cargo, String email, Set atencions) {
+       this.idPersonal = idPersonal;
+       this.nombres = nombres;
+       this.apellidos = apellidos;
        this.dni = dni;
        this.telefono = telefono;
        this.cargo = cargo;
        this.email = email;
-       this.apellidos = apellidos;
        this.atencions = atencions;
     }
    
-    public Integer getIdpersonal() {
-        return this.idpersonal;
+    public int getIdPersonal() {
+        return this.idPersonal;
     }
     
-    public void setIdpersonal(Integer idpersonal) {
-        this.idpersonal = idpersonal;
+    public void setIdPersonal(int idPersonal) {
+        this.idPersonal = idPersonal;
     }
-    public String getNombre() {
-        return this.nombre;
+    public String getNombres() {
+        return this.nombres;
     }
     
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
+    public String getApellidos() {
+        return this.apellidos;
+    }
+    
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
     public String getDni() {
         return this.dni;
@@ -83,13 +92,6 @@ public class Personal  implements java.io.Serializable {
     
     public void setEmail(String email) {
         this.email = email;
-    }
-    public String getApellidos() {
-        return this.apellidos;
-    }
-    
-    public void setApellidos(String apellidos) {
-        this.apellidos = apellidos;
     }
     public Set getAtencions() {
         return this.atencions;

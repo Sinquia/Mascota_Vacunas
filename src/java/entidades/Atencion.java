@@ -1,5 +1,5 @@
 package entidades;
-// Generated 24/06/2019 11:12:26 AM by Hibernate Tools 4.3.1
+// Generated 11/07/2019 10:50:35 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -10,37 +10,38 @@ import java.util.Date;
 public class Atencion  implements java.io.Serializable {
 
 
-     private Integer idAtencion;
-     private ClienteHasMascota clienteHasMascota;
+     private int idAtencion;
+     private Mascotaporcliente mascotaporcliente;
      private Personal personal;
      private Date fechaAtencion;
-     private String diagnostico;
      private Date horaAtencion;
+     private String diagnostico;
 
     public Atencion() {
     }
 
-    public Atencion(ClienteHasMascota clienteHasMascota, Personal personal, Date fechaAtencion, String diagnostico, Date horaAtencion) {
-       this.clienteHasMascota = clienteHasMascota;
+    public Atencion(int idAtencion, Mascotaporcliente mascotaporcliente, Personal personal, Date fechaAtencion, Date horaAtencion, String diagnostico) {
+       this.idAtencion = idAtencion;
+       this.mascotaporcliente = mascotaporcliente;
        this.personal = personal;
        this.fechaAtencion = fechaAtencion;
-       this.diagnostico = diagnostico;
        this.horaAtencion = horaAtencion;
+       this.diagnostico = diagnostico;
     }
    
-    public Integer getIdAtencion() {
+    public int getIdAtencion() {
         return this.idAtencion;
     }
     
-    public void setIdAtencion(Integer idAtencion) {
+    public void setIdAtencion(int idAtencion) {
         this.idAtencion = idAtencion;
     }
-    public ClienteHasMascota getClienteHasMascota() {
-        return this.clienteHasMascota;
+    public Mascotaporcliente getMascotaporcliente() {
+        return this.mascotaporcliente;
     }
     
-    public void setClienteHasMascota(ClienteHasMascota clienteHasMascota) {
-        this.clienteHasMascota = clienteHasMascota;
+    public void setMascotaporcliente(Mascotaporcliente mascotaporcliente) {
+        this.mascotaporcliente = mascotaporcliente;
     }
     public Personal getPersonal() {
         return this.personal;
@@ -56,19 +57,19 @@ public class Atencion  implements java.io.Serializable {
     public void setFechaAtencion(Date fechaAtencion) {
         this.fechaAtencion = fechaAtencion;
     }
-    public String getDiagnostico() {
-        return this.diagnostico;
-    }
-    
-    public void setDiagnostico(String diagnostico) {
-        this.diagnostico = diagnostico;
-    }
     public Date getHoraAtencion() {
         return this.horaAtencion;
     }
     
     public void setHoraAtencion(Date horaAtencion) {
         this.horaAtencion = horaAtencion;
+    }
+    public String getDiagnostico() {
+        return this.diagnostico;
+    }
+    
+    public void setDiagnostico(String diagnostico) {
+        this.diagnostico = diagnostico;
     }
 
 
