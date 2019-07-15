@@ -40,7 +40,7 @@ public class MascotaPorClienteBean {
     }
     public String guardar(){
         MascotaPorClienteDao dao= new MascotaPorClienteDao();
-        mascotaporclienteid.setIdCliente(idCliente);
+        mascotaporclienteid.getIdCliente(idCliente);
         mascotaporclienteid.setIdMascota(idMascota);
         mascotaporcliente.setId(mascotaporclienteid);
         dao.guardarMascotaPorCliente(mascotaporcliente);

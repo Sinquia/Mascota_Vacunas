@@ -26,11 +26,11 @@
                             <p:outputLabel value="Codigo"/>
                             <p:inputText value="#{clienteBean.cliente.idCliente}" required="true"/>
                             <p:outputLabel value="Nombre Cliente"/>
-                            <p:inputText value="#{clienteBean.cliente.nombres}"/>
+                            <p:inputText value="#{clienteBean.cliente.nombre}"/>
                             <p:outputLabel value="Apellido Cliente"/>
-                            <p:inputText value="#{clienteBean.cliente.apellidos}"/>
+                            <p:inputText value="#{clienteBean.cliente.apellido}"/>
                             <p:outputLabel value="Fecha Nac:"/>
-                            <p:calendar value="#{clienteBean.cliente.fechaNaci}"/>
+                            <p:calendar value="#{clienteBean.cliente.fechaNac}"/>
                             <p:outputLabel value="Email"/>
                             <p:inputText value="#{clienteBean.cliente.email}"/>
                             <p:outputLabel value="Direccion"/>
@@ -52,16 +52,16 @@
                                 <h:outputText value="#{cliente.idCliente}"/>
                             </p:column>
                             <p:column headerText="Nombre del Cliente">
-                                <h:outputText value="#{cliente.nombres}"/>
+                                <h:outputText value="#{cliente.nombre}"/>
                             </p:column>
                             <p:column headerText="Apellido del Cliente">
-                                <h:outputText value="#{cliente.apellidos}"/>
+                                <h:outputText value="#{cliente.apellido}"/>
                             </p:column>
                             <p:column headerText="Telefono">
                                 <h:outputText value="#{cliente.telefono}"/>
                             </p:column>
                             <p:column headerText="Fecha Nacimiento">
-                                <h:outputText value="#{cliente.fechaNaci}"/>
+                                <h:outputText value="#{cliente.fechaNac}"/>
                             </p:column>
                             <p:column headerText="Accion">
                                 <p:commandButton value="Eliminar" onclick="PF('dgEliminar').show();">

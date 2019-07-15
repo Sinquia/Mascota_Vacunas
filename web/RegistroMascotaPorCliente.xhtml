@@ -24,14 +24,14 @@
                             <p:outputLabel value="Clientes"/>
                             <p:selectOneMenu value="#{mascotaPorClienteBean.idCliente}">
                                 <f:selectItem itemLabel="-- Seleccione Cliente --"/>
-                                <f:selectItems value="#{mascotaPorClienteBean.listaclientes}" var="cliente" itemLabel="#{cliente.nombres}" itemValue="#{cliente.idCliente}"/>
+                                <f:selectItems value="#{mascotaPorClienteBean.listaclientes}" var="cliente" itemLabel="#{cliente.nombre}" itemValue="#{cliente.idCliente}"/>
                             </p:selectOneMenu>
                         </h:panelGrid>
                         <h:panelGrid columns="3">
                             <p:outputLabel value="Mascota"/>
                             <p:selectOneMenu value="#{mascotaPorClienteBean.idMascota}">
                                 <f:selectItem itemLabel="-- Seleccione Mascota --"/>
-                                <f:selectItems value="#{mascotaPorClienteBean.listamascotas}" var="mascota" itemLabel="#{mascota.nombreMascota}" itemValue="#{mascota.idMascota}"/>
+                                <f:selectItems value="#{mascotaPorClienteBean.listamascotas}" var="mascota" itemLabel="#{mascota.nameMascota}" itemValue="#{mascota.idMascota}"/>
                             </p:selectOneMenu>
                         </h:panelGrid>
                         
@@ -41,7 +41,7 @@
                                 <f:selectItem itemLabel="-- Seleccione Estado --"/>
                                 <f:selectItem itemLabel=" Activo" itemValue="A"/>
                                  <f:selectItem itemLabel=" Inactivo" itemValue="I"/>
-                                <f:selectItems value="#{mascotaPorClienteBean.listaclientes}" var="cliente" itemLabel="#{cliente.nombres}" itemValue="#{cliente.idCliente}"/>
+                                <f:selectItems value="#{mascotaPorClienteBean.listaclientes}" var="cliente" itemLabel="#{cliente.nombre}" itemValue="#{cliente.idCliente}"/>
                             </p:selectOneMenu>
                         </h:panelGrid>
                         
@@ -59,13 +59,13 @@
                                 <h:outputText value="#{mascota.idMascota}"/>
                             </p:column>
                             <p:column headerText="Nombre de Mascota">
-                                <h:outputText value="#{mascota.nombreMascota}"/>
+                                <h:outputText value="#{mascota.nameMascota}"/>
                             </p:column>
                             <p:column headerText="Raza">
                                 <h:outputText value="#{mascota.raza}"/>
                             </p:column>
                             <p:column headerText="Nombre de Cliente">
-                                <h:outputText value="#{mascota.nombreCliente}"/>
+                                <h:outputText value="#{mascota.nameCliente}"/>
                             </p:column>
                             <p:column headerText="Estado">
                               

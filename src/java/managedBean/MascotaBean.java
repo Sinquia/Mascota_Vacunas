@@ -14,15 +14,13 @@ import org.hibernate.HibernateException;
 
 /**
  *
- * @author LEO
+ * @author SINQUIA
  */
 @ManagedBean
 @ViewScoped
 public class MascotaBean implements Serializable {
 
-    /**
-     * SE COMUNICA CON EL DAO
-     */
+  
     private Mascota mascota;
     private boolean banderaSelect = false;
 

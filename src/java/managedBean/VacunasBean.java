@@ -46,14 +46,14 @@ public class VacunasBean {
         if (respuesta) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Registro insertado con exito", "exito"));
         } else {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Error al insertar", "No se pudo registrar"));
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Error al insertar"));
         }
-        return "/Vacunas";
+        return "/IVacunas";
 
     }
 
     public String clean() {
-        return "/Vacunas";
+        return "/IVacunas";
     }
 
     public String GuardarVacuna() {
@@ -63,9 +63,9 @@ public class VacunasBean {
         if (respuesta) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Registro actualizado con exito", "exito"));
         } else {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Error al ", "No se pudo registrar"));
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Error al guardar"));
         }
-        return "/Vacunas";
+        return "/IVacunas";
 
     }
 
@@ -76,9 +76,9 @@ public class VacunasBean {
         if (respuesta) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO, "Registro eliminado con exito", "exito"));
         } else {
-            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Error al eliminar", "No se pudo registrar"));
+            FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Error al eliminar"));
         }
-        return "/Vacuna";
+        return "/IVacuna";
 
     }
 

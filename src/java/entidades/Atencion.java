@@ -1,5 +1,5 @@
 package entidades;
-// Generated 11/07/2019 10:50:35 AM by Hibernate Tools 4.3.1
+// Generated 15/07/2019 09:12:37 AM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -10,30 +10,29 @@ import java.util.Date;
 public class Atencion  implements java.io.Serializable {
 
 
-     private int idAtencion;
+     private Integer idAtencion;
      private Mascotaporcliente mascotaporcliente;
      private Personal personal;
      private Date fechaAtencion;
-     private Date horaAtencion;
      private String diagnostico;
+     private Date horaAtencion;
 
     public Atencion() {
     }
 
-    public Atencion(int idAtencion, Mascotaporcliente mascotaporcliente, Personal personal, Date fechaAtencion, Date horaAtencion, String diagnostico) {
-       this.idAtencion = idAtencion;
+    public Atencion(Mascotaporcliente mascotaporcliente, Personal personal, Date fechaAtencion, String diagnostico, Date horaAtencion) {
        this.mascotaporcliente = mascotaporcliente;
        this.personal = personal;
        this.fechaAtencion = fechaAtencion;
-       this.horaAtencion = horaAtencion;
        this.diagnostico = diagnostico;
+       this.horaAtencion = horaAtencion;
     }
    
-    public int getIdAtencion() {
+    public Integer getIdAtencion() {
         return this.idAtencion;
     }
     
-    public void setIdAtencion(int idAtencion) {
+    public void setIdAtencion(Integer idAtencion) {
         this.idAtencion = idAtencion;
     }
     public Mascotaporcliente getMascotaporcliente() {
@@ -57,19 +56,19 @@ public class Atencion  implements java.io.Serializable {
     public void setFechaAtencion(Date fechaAtencion) {
         this.fechaAtencion = fechaAtencion;
     }
-    public Date getHoraAtencion() {
-        return this.horaAtencion;
-    }
-    
-    public void setHoraAtencion(Date horaAtencion) {
-        this.horaAtencion = horaAtencion;
-    }
     public String getDiagnostico() {
         return this.diagnostico;
     }
     
     public void setDiagnostico(String diagnostico) {
         this.diagnostico = diagnostico;
+    }
+    public Date getHoraAtencion() {
+        return this.horaAtencion;
+    }
+    
+    public void setHoraAtencion(Date horaAtencion) {
+        this.horaAtencion = horaAtencion;
     }
 
 

@@ -1,21 +1,21 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-
+<!-- Generated 15/07/2019 09:12:37 AM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-     <class name="entidades.Vacunas" table="vacuna" catalog="mascota" optimistic-lock="version">
-        <id name="idVacunas" type="java.lang.Integer">
-            <column name="idVacunas" />
-            <generator class="identity" />
+    <class name="entidades.Vacunas" table="vacunas" catalog="mascota" optimistic-lock="version">
+        <id name="idVacuna" type="int">
+            <column name="idVacuna" />
+            <generator class="assigned" />
         </id>
-        <property name="tipo_vacuna" type="string">
-            <column name="tipo_vacuna" length="45" not-null="true" />
+        <property name="tipoVacuna" type="string">
+            <column name="tipo_vacuna" length="45" />
         </property>
-        <property name="edad_meses" type="int">
-            <column name="edad" not-null="true" />
+        <property name="edad" type="java.lang.Integer">
+            <column name="edad" />
         </property>
-       <property name="precio" type="string">
-            <column name="precio" length="45" not-null="true" />
+        <property name="precio" type="string">
+            <column name="precio" length="45" />
         </property>
     </class>
 </hibernate-mapping>
